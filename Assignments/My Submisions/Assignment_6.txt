@@ -1,0 +1,203 @@
+# Name: Samantha Mackay
+# Student Number: 3467946
+# Subject: CSIT110
+
+"""
+Assignment 6
+Released: Monday 30/04/18
+Due: Sunday 06/05/18
+"""
+
+# Personal details:
+print("Samantha Mackay - 3467946 - CSIT110 - Assignment 6")
+
+
+def qstn_num(qstn):
+# Define a function to avoid code repetition
+    "This function commences each question and prints the number"
+    
+    input("\n\n - Please press enter to begin Question {0}. ".format(qstn))
+    # Ask user to confirm commencement
+    
+    print("\nQuestion {0}".format(qstn))
+    
+# End of function: "qstn_num"
+
+
+# Question 1
+# Summary: User to practice multiplication and addition
+qstn_num(1)
+
+
+def two_random_num():
+# Define a function to avoid code repetition
+    "This function creates the random numbers and questions for user"
+
+    for math_practice in range(0, 5):
+    # This will run through five values (to ask user 5 questions)
+        import random
+        # Imports a python module called random
+
+        ran1 = random.randint(1, 100)
+        # Generates a random integer between 1 and 100
+        ran2 = random.randint(1, 9)
+        # Generates a random integer between 1 and 9
+
+
+        if ((user_input == "a") or (user_input == "A")):
+        # User chose Addition
+            eqn_op = " + "
+            # Assign plus to variable for insertion in equation
+            eqn_calc = (ran1 + ran2)
+            # Compute addition equation
+            
+
+        elif ((user_input == "m") or (user_input == "M")):
+        # User chose Multiplication
+            eqn_op = " x "
+            # Assign times to variable for insertion in equation
+            eqn_calc = (ran1 * ran2)
+            # Compute multiplication equation
+            
+
+        eqn_input = input("\n{0}{1}{2} = ".format(ran1, eqn_op, ran2))
+        # Insert the two random numbers into chosen topic question
+        # Ask user for an answer
+        
+        eqn_ans = int(eqn_input)
+        # Convert user's input to an integer
+
+
+        if (eqn_ans == eqn_calc):
+        # Test if user's answer matches calculated answer
+            print("Correct")
+
+        else:
+        # Any answer OTHER than the calculated correct value
+            print("Incorrect. The correct answer is {0}.".format(eqn_calc))
+            # Alert user to incorrect response and print answer
+
+# End of function: "two_random_num"
+
+
+while True:
+# Run program forever until the user wishes to quit
+    print()
+    print("a > Addition")
+    print("m > Multiplication")
+    print("q > Quit")
+    # Give user the available options for the program
+
+    user_input = input("Enter command (a/m/q): ")
+    # Ask user which option they want
+
+    if ((user_input == "q") or (user_input == "Q")):
+    # The user wishes to quit
+        print("\nGood bye!")
+        # Print a departing message to the user
+        break
+        # End the while loop
+
+    two_random_num()
+    # The user wishes to continue, call our previously defined function
+
+
+
+
+# Question 2
+# Summary: User to guess a secret randomly generated integer
+qstn_num(2)
+
+
+range_min = 0
+range_max = 100
+# Define the variables limiting the extent of the program's range
+
+import random
+# Imports a python module called random
+
+ran_num = random.randint(range_min, range_max)
+# Generates a random integer between 0 and 100
+
+print()
+print("A secret random integer between {0} and {1} has been generated.". \
+# Let the user know the aim of the program
+    format(range_min, range_max))
+    #  and the program's parameters
+
+print("Can you guess what it is?\n")
+
+
+def guess_func():
+# Define a function to avoid code repetition
+    "This function asks the user for their guess within a stated range"
+
+    guess_input = input("Make a guess between {0} and {1}: ". \
+    # Ask the user for their first guess
+        format(range_min, range_max))
+        # between these two values
+        
+    guess = int(guess_input)
+    # Convert user's guess to an integer value
+
+    return guess
+
+# End of function: "guess_func"
+
+
+def wrong_func():
+# Define a function to avoid code repetition
+    "This function informs user of incorrect guess and new parameter"
+    
+    print("Wrong number! The secret number is {0} than {1}.\n".format(size, guess))
+
+# End of function: "wrong_func"
+
+
+
+guess = guess_func()
+# Assign variable "guess" and call previously defined function
+
+
+# Based on user's first guess:
+while (ran_num != guess):
+# Run forever whilst the user's guess does NOT equal the random number
+
+    if ((guess < range_min) or (guess > range_max)):
+    # User's guess is outside specified range
+        print("Invalid input! Please make a guess between {0} and {1}. \n".format(range_min, range_max))
+        # Inform user of impossible value and restate parameters
+
+        guess = guess_func()
+        # Call function (asks user to guess again within updated range)
+
+
+    elif (guess < ran_num):
+    # User's guess is less than the random number
+        range_min = guess + 1
+        # Amend range. Minimum parameter is now 1 more than guess
+        size = "larger"
+    
+        wrong_func()
+        # Call function (inform user of incorrect guess)
+        guess = guess_func()
+
+
+    elif (guess > ran_num):
+    # User's guess is greater than the random number
+        range_max = guess - 1
+        # Amend range. Maximum parameter is now 1 less than guess
+        size = "less"
+
+        wrong_func()
+        guess = guess_func()
+
+
+# If user guessed correct value (i.e. ran_num == guess)
+# Ends while loop
+print("Congratulations! You got the right number.")
+
+
+
+# End of Assignment 5
+print("\n\n\nEnd. Samantha Mackay. Tues 01/05/18")

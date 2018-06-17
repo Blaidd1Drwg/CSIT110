@@ -1,0 +1,236 @@
+# Name: Samantha Mackay
+# Student Number: 3467946
+# Subject: CSIT110
+
+"""
+Assignment 8
+Released: Monday 20/05/18
+Due: Sunday 27/05/18
+
+Code to: use list and own functions
+"""
+
+# Personal details:
+print("\nSamantha Mackay - 3467946 - CSIT110 - Assignment 8")
+
+
+# Question 1
+question = 1
+# Summary: User to enter assessment details. Print details.
+
+# Ask the user to confirm commencement of question
+input("\n\n - Please press enter to begin Question {0}. ".format(question))
+
+# Print question number, with line spacing for neatness
+print("\nQuestion {0}\n".format(question))
+
+
+# ======================================================================
+# Section 1: Create Lists
+# ======================================================================
+
+# This list will hold the names of each task
+assessment_titles = []  # <-- As yet, empty list
+
+# This list will hold the marks scored on each task
+assessment_marks = []  # <-- As yet, empty list
+
+
+# ======================================================================
+# Section 2: Defining Functions
+# ======================================================================
+
+# Define #1: Get Information - 'collect assessment details from user' function
+
+def get_info():
+
+    # Ask user how many tasks user wishes to enter
+    assessments_total = int(input("Enter the number of assessments: "))
+
+    # For each task number within total number specified by user
+    for task_num in range(0, assessments_total):
+        print()
+
+        # Print number of the task itself
+        print("Assessment {0}.".format(task_num + 1))
+
+        # Ask user for name of task
+        task_title = input("Enter assessment title: ")
+        # Add task name to list of titles
+        assessment_titles.append(task_title)
+
+        # Ask user for mark scored on task
+        task_mark = input("Enter assessment mark: ")
+        # Add task score to list of marks
+        assessment_marks.append(task_mark)
+
+    return assessments_total
+
+# End of function: "get_info"
+
+
+
+# Define #2: Print Information - 'print collected info to user' function
+
+def print_info(assessments_total):
+
+    # Print heading
+    print()
+    print("-------------------")
+    print("Assessment details:")
+    print("-------------------")
+
+    # Print table
+    # Rows show assessments in order within list of total tasks
+    for task_num in range(0, assessments_total):
+
+        # Column 1 is title, aligned left
+        # Column 2 is mark, aligned right
+        print("{0:<42}{1:>3}".format(assessment_titles[task_num], assessment_marks[task_num]))
+
+# End of function: "print_info"
+
+
+# ======================================================================
+# Section 3: Main Program
+# ======================================================================
+
+# Collect information from user
+assessments_total = get_info()
+
+# Print information to user
+print_info(assessments_total)
+
+print()
+# End of Question 1
+
+
+
+# **********************************************************************
+
+
+
+# Question 2
+question = 2
+# Summary: User to enter values into a list. Display list.
+
+# Ask the user to confirm commencement of question
+input("\n\n - Please press enter to begin Question {0}. ".format(question))
+
+# Print question number, with line spacing for neatness
+print("\nQuestion {0}\n".format(question))
+
+
+# ======================================================================
+# Section 1: Create List
+# ======================================================================
+
+# This list will hold the user's values
+user_list = []  # <-- As yet, empty list
+
+
+# ======================================================================
+# Section 2: Defining Functions
+# ======================================================================
+
+# Define #1: Get List Information - 'collect details from user' function
+
+def get_info():
+    # Ask user length of their list
+    user_length = int(input("Enter the length of the list: "))
+
+    # Ask user data-type of elements within their list
+    data_type_input = input("Choose the type of data (integer(I) / string(S) / decimal(D)): ")
+
+    # Convert user input to uppercase
+    data_type_letter = data_type_input.upper()
+
+    # For each element of their list (from beginning to end)
+    for element in range(0, user_length):
+
+        # Ask user for element's value
+        element_value = (input("Enter the list element: "))
+
+        # Depending on data type of list, convert to appropriate
+        # Option (I) Integer
+        if (data_type_letter == "I"):
+            # Convert to integer
+            element_value = int(element_value)
+            data_type = "an integer"
+
+        # Option (S) String
+        elif (data_type_letter == "S"):
+            # Don't need to convert - already a string due to input
+            data_type = "a string"
+
+        # Option (D) Decimal
+        elif (data_type_letter == "D"):
+            # Convert to decimal
+            element_value = float(element_value)
+            data_type = "a decimal"
+
+        # Add element to user's list
+        user_list.append(element_value)
+
+    return data_type
+
+# End of function: "get_info"
+
+
+
+# Define #2: Print List Information - 'print collected info to user' function
+
+def print_list(data_type):
+    # Convert user's list to string and slice off '[ ]'
+    user_list_sliced = str(user_list)[1: -1]
+
+    # Print summary statement to user
+    print()
+    print("You have entered {0} list: {1}".format(data_type, user_list_sliced))
+
+# End of function: "print_info"
+
+
+# ======================================================================
+# Section 3: Main Program
+# ======================================================================
+
+# Create "truth" variable
+run_again = "Y"
+
+# Start a loop to run program until user chooses NOT to enter a list
+# NOT REQUIRED!! Additional / extra.
+# This loop is added purely for ease of checking different data types
+# and proof of student's understanding of subject material
+
+while (run_again == "Y"):
+    # Main program: - call previously defined functions
+    
+    # Collect information from user
+    data_type = get_info()
+
+    # Print information to user
+    print_list(data_type)
+
+    # Print two blank lines, for aesthetic neatness
+    print("\n\n")
+    # Ask user if they wish to enter another list
+    run_again_input = input(" - Would you like to enter another list? (Y/N): ")
+
+    # Convert user input to uppercase
+    run_again = run_again_input.upper()
+
+    # Empty user's list for program repeat
+    user_list.clear() # <-- user_list = []  again.
+    print("\n\n")
+
+
+
+# End of Question 2
+
+print()
+print("End of Assignment 8.  Samantha Mackay")
+
+
+
+# End of Assignment 8.  Samantha Mackay

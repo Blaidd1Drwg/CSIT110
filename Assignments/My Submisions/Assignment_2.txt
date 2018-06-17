@@ -1,0 +1,249 @@
+# Name: Samantha Mackay
+# Student Number: 3467946
+# Subject: CSIT110
+
+"""
+Assignment 2
+Released: Monday 19/03/18
+Due: Sunday 25/03/18
+
+"""
+
+# Assignment 2 - (Tues 20/03/18)
+# Personal Details
+first_name = "Samantha"
+last_name = "Mackay"
+full_name = first_name + " " + last_name
+date = "Tues 20th March 2018"
+student_number = 3467946
+subject_code = "CSIT110"
+task_name = "Assignment"
+task_number = 2
+
+print("{0} - {1} - {2} - {3} {4}".format( \
+    full_name, student_number, subject_code, task_name, task_number))
+print()
+print()
+
+
+# Question 1
+# Use the print function to produce a specific output
+print("Question 1")
+print()
+
+# Output_0: Path
+full_path = "#!/usr/bin/python"
+print(full_path)
+print()
+
+# Output_1: Variable 1
+var1 = "\'Hello World!\'"
+print("{0}{1}{2}".format("var1 ", "= ", var1))
+
+# Output_2: Variable 2
+var2 = "\"Python Programming\""
+print("{0} {1} {2}".format("var2", "=", var2))
+print()
+
+# Output_3: print("var1[0]: \n", var1[0])
+function = "print"
+align1 = "var1[0]"
+print("{0}{1}, {2}".\
+    format(function + "(\"", align1 + ": \\n\"", align1 + ")"))
+
+# Output_4: print("var2[1:5]: \t", var2[1:5])
+align2 = "var2[1:5]"
+print("{0}{1}, {2}".\
+    format(function + "(\"", align2 + ": \\t\"", align2 + ")"))
+
+print()
+print()
+
+
+# Question 2
+# Output table of data with specific format
+print("Question 2")
+print()
+
+# Variable 1: Model
+processor = "i7"
+model_number1 = "8700K"
+model_number2 = "8700"
+model_number3 = "8600K"
+model_number4 = "8400"
+model_number5 = "8350K"
+model_number6 = "8100"
+
+# Variable 2: Price
+price1 = 359
+price2 = 303
+price3 = 257
+price4 = 182
+price5 = 168
+price6 = 117
+
+# Variable 3: Cores
+core_least = 4
+core_medium = 6
+core_most = 12
+
+# Variable 4: Threads
+threads_least = 4
+threads_medium = 6
+threads_most = 12
+
+# Variable 5: Date
+date1 = 1
+date2 = 3
+date3 = 2
+date4 = 4
+date5 = 12
+date6 = 1
+
+# Variable 6 and 7: GPU and Release Year
+gpu = 630
+release_year1 = 2017
+release_year2 = 2018
+
+
+# Print Column Headings
+print("{0:<8}{1:>9}{2:^21}{3:>7}{4:>11}".format( \
+    "Model", "Price", "Core/Threads", "GPU", "Release"))
+
+# Data Row 1
+print("{0:<8}{1:>9}{2:^21}{3:>7}{4:>7}{5:>4}".format( \
+    processor + "-" + model_number1, \
+    "$" + str(price1), \
+    str(core_medium) + "/" + str(threads_most), \
+    "UHD " + str(gpu), \
+    str(date1) + "/", \
+    release_year1))
+
+# Data Row 2
+print("{0:<8}{1:>9}{2:^21}{3:>7}{4:>7}{5:>4}".format( \
+    processor + "-" + model_number2, \
+    "$" + str(price2), \
+    str(core_medium) + "/" + str(threads_most), \
+    "UHD " + str(gpu), \
+    str(date2) + "/", \
+    release_year1))
+
+# Data Row 3
+print("{0:<8}{1:>9}{2:^21}{3:>7}{4:>7}{5:>4}".format( \
+    processor + "-" + model_number3, \
+    "$" + str(price3), \
+    str(core_medium) + "/" + str(threads_medium), \
+    "UHD " + str(gpu), \
+    str(date3) + "/", \
+    release_year1))
+
+# Data Row 4
+print("{0:<8}{1:>9}{2:^21}{3:>7}{4:>7}{5:>4}".format( \
+    processor + "-" + model_number4, \
+    "$" + str(price4), \
+    str(core_medium) + "/" + str(threads_medium), \
+    "UHD " + str(gpu), \
+    str(date4) + "/", \
+    release_year1))
+
+# Data Row 5
+print("{0:<8}{1:>9}{2:^21}{3:>7}{4:>7}{5:>4}".format( \
+    processor + "-" + model_number5, \
+    "$" + str(price5), \
+    str(core_least) + "/" + str(threads_least), \
+    "UHD " + str(gpu), \
+    str(date5) + "/", \
+    release_year1))
+
+# Data Row 6
+print("{0:<8}{1:>9}{2:^21}{3:>7}{4:>7}{5:>4}".format( \
+    processor + "-" + model_number6, \
+    "$" + str(price6), \
+    str(core_least) + "/" + str(threads_least), \
+    "UHD " + str(gpu), \
+    str(date6) + "/", \
+    release_year2))
+
+print()
+print()
+
+
+# Question 3
+# Produce output and calculations using two methods
+print("Question 3")
+print()
+
+# Assign Variables
+age = 24
+weight = 70
+height = 1.75
+calc1 = weight/height
+bmi = calc1/height
+# Change repeated int values to str for string addition
+weight = str(weight)
+height = str(height)
+calc1 = str(calc1)
+bmi = str(bmi)
+
+# Part A
+print(" - Part A - string concatenation/addition")
+print()
+
+# BMI spiel
+print("To work out your BMI:")
+print()
+print("Divide your weight in kilograms (kg) by your height in metres (m)")
+print("Then divide the answer by your height again to get your BMI.")
+print()
+
+print("For example:")
+print("Your age is " + str(age) + ".")
+
+# BMI calculation part 1
+print("If you weigh " + weight + "kg and you're " \
+    + height + "m tall, divide " + weight \
+    + " by " + height + " - the")
+print("answer is " + calc1 + ".")
+
+# BMI calculation part 2:
+print("Then divide " + calc1 + " by " \
+    + height + " - the answer is " + bmi + ".")
+
+print("Your BMI is " + bmi + "kg per square meter.")
+print()
+print()
+
+
+# Part B
+print(" - Part B - string format")
+print()
+
+# BMI spiel
+print("{0}".format("To work out your BMI:"))
+print()
+print("{0}".format( \
+    "Divide your weight in kilograms (kg) by your height in metres (m)"))
+print("{0}".format( \
+    "Then divide the answer by your height again to get your BMI."))
+print()
+
+print("{0}".format("For example:"))
+print("Your age is {0}.".format(age))
+
+# BMI calculation 1
+print( "If you weigh {0}kg and you're {1}m tall, divide {0} by {1} - the". \
+    format(weight, height))
+print("answer is {0}.".format(calc1))
+
+# BMI calculation 2:
+print("Then divide {0} by {1} - the answer is {2}.". \
+    format(calc1, height, bmi))
+
+print("Your BMI is {0}kg per square meter.".format(bmi))
+print()
+print()
+
+
+# End of Assignment 2
+print()
+print("End. {0} - {1}".format(full_name, date))

@@ -1,0 +1,132 @@
+# Name: Samantha Mackay
+# Student Number: 3467946
+# Subject: CSIT110
+
+"""
+Assignment 5
+Released: Monday 23/04/18
+Due: Sunday 29/04/18
+
+"""
+
+# Assignment 5 - (Tues 24/04/18)
+# Personal Details
+first_name = "Samantha"
+last_name = "Mackay"
+full_name = first_name + " " + last_name
+date = "Tues 24th April 2018"
+student_number = 3467946
+subject_code = "CSIT110"
+task_name = "Assignment"
+task_number = 5
+
+# Print personal details
+print("\n{0} - {1} - {2} - {3} {4}".format(
+    full_name, student_number, subject_code, task_name, task_number))
+
+
+# Question 1 - Print table of user values and interpretations
+input("\n\n - Please press enter to begin Question 1.")
+print("\n\nQuestion 1\n")
+
+# Ask User: minimum number to square
+input_minimum = input("Enter a minimum number to take square: ")
+# Convert to an integer
+int_minimum = int(input_minimum)
+
+# Ask User: maximum number to square
+input_maximum = input("Enter a maximum number to take square: ")
+# Convert to an integer
+int_maximum = int(input_maximum)
+
+# Specify Column variables
+column1 = "Number"
+column2 = "Square"
+column3 = "Last Digit of Square"
+
+
+# Question 1 - Part A - Using FOR LOOP
+
+# Table 1 heading
+title_for = "\nOutput using the FOR LOOP:"
+print(title_for)
+
+# Column headings
+print("{0:<14}{1:>14}{2:^35}". \
+    format(column1, column2, column3))
+
+# Column data/calculations
+for i in range(int_minimum, int_maximum + 1):
+    print("{0:<14}{1:>14}{2:^35}". \
+          format(i, i**2, (i**2) % 10))
+
+
+# Question 1 - Part B - Using WHILE LOOP
+
+# Table 2 heading
+title_while = "\nOutput using the WHILE LOOP:"
+print(title_while)
+
+# Column headings
+print("{0:<14}{1:>14}{2:^35}". \
+      format(column1, column2, column3))
+
+# Column data/calculations
+i = int_minimum
+while (i <= int_maximum):
+    print("{0:<14}{1:>14}{2:^35}". \
+          format(i, i**2, (i**2) % 10))
+    i = i + 1
+
+
+# Question 2 - Print table of user loan amounts and interest
+# !Use FOR LOOP!
+input("\n\n\n - Please press enter to begin Question 2.")
+print("\n\nQuestion 2\n")
+
+# Ask User: initial borrowing amount
+input_borrow = input("Enter an amount to be borrowed: ")
+# Convert to an integer
+borrow = int(input_borrow)
+
+# Ask User: percentage interest rate
+input_rate = input("Enter the interest rate (in percentage): ")
+# Convert to decimal
+float_rate = float(input_rate)
+# Make percentage and round to 2 decimal places
+rate = round((float_rate / 100), 4)
+
+# Ask User: loan length
+input_term = input("Enter the loan term (in years): ")
+# Convert to an integer
+term = int(input_term)
+
+# Specify Column variables
+column1 = "Start of year"
+column2 = "Interest at " + input_rate + "%"
+column3 = "End of year"
+
+
+# Column headings
+print("\n\n{0:>30}{1:>25}{2:>20}". \
+    format(column1, column2, column3))
+
+# Column data/calculations
+for i in range(1, (term + 1)):
+    print("Year {0:<2}{1:>23}{2:>25}{3:>20}". \
+        # Start formatting define bracket
+        format( \
+        # Value {0} = Year
+        i, \
+        # Value {1} = Start of Year
+        "$" + str(round((borrow * ((rate + 1)**(i - 1))))), \
+        # Value {2} = Interest
+        "$" + str(round((borrow * rate * ((rate + 1)**(i-1))))), \
+        # Value {3} = End of Year
+        "$" + str(round((borrow * ((rate + 1)**i))))) \
+        # End formatting define bracket
+        )
+
+
+# End of Assignment 5
+print("\n\n\nEnd. {0} - {1}".format(full_name, date))

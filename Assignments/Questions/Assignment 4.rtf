@@ -1,0 +1,496 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf400
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 TimesNewRomanPSMT;\f2\fswiss\fcharset0 ArialMT;
+\f3\fmodern\fcharset0 CourierNewPSMT;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid1\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid101\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww20120\viewh13400\viewkind0
+\deftab720
+\pard\pardeftab720\sl440\sa240\partightenfactor0
+
+\f0\b\fs37\fsmilli18667 \cf2 \cb3 \expnd0\expndtw0\kerning0
+SCIT, University of Wollongong CSIT110/CSIT810 Autumn Session 2018 
+\b0\fs24 \cb1 \
+
+\b\fs37\fsmilli18667 \cb3 Assignment 4 (5%) 
+\f1\b0 due on 
+\f0\b Sunday 15 April 2018 23:59PM 
+\b0\fs24 \cb1 \
+\pard\pardeftab720\sl360\sa240\partightenfactor0
+
+\b\fs32 \cf2 \cb3 Objectives 
+\b0\fs24 \cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\sa240\partightenfactor0
+\ls1\ilvl0
+\f2\fs32 \cf2 \cb3 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+\uc0\u9679  \'a0
+\f1 Able to write clear code with comments and follow coding convention 
+\f0\fs24 \cb1 \uc0\u8232 \
+\ls1\ilvl0
+\f2\fs32 \cb3 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+\uc0\u9679  \'a0
+\f1 Able to get user input 
+\f0\fs24 \cb1 \uc0\u8232 \
+\ls1\ilvl0
+\f2\fs32 \cb3 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+\uc0\u9679  \'a0
+\f1 Able to translate string into integer and decimal numbers 
+\f0\fs24 \cb1 \uc0\u8232 \
+\ls1\ilvl0
+\f2\fs32 \cb3 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+\uc0\u9679  \'a0
+\f1 Able to use if-else statement 
+\f0\fs24 \cb1 \uc0\u8232 \
+\ls1\ilvl0
+\f2\fs32 \cb3 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+\uc0\u9679  \'a0
+\f1 Able to use numerical calculation 
+\f0\b Instructions 
+\b0\fs24 \cb1 \uc0\u8232 
+\f1\fs32 \cb3 Put all your python code into a single file and submit it via the eLearning site (Assignment 4 Submission on Moodle). 
+\f0\fs24 \cb1 \uc0\u8232 
+\f1\fs32 \cb3 You may be asked questions about your code in the lab. Your 
+\f0\b marks will be deducted 
+\f1\b0 if you could not answer the questions presented by the tutors. 
+\f0\fs24 \cb1 \uc0\u8232 
+\f1\fs32 \cb3 Late submissions will be marked with a 20% marks deduction for one day late, including weekend. Submissions more than 3 days late will not be marked. 
+\f0\fs24 \cb1 \uc0\u8232 
+\f1\fs32 \cb3 If you need an extension, please apply for an Academic Consideration through SOLS on or before the assignment due date. 
+\f0\fs24 \cb1 \uc0\u8232 
+\f1\fs32 \cb3 Plagiarism is treated seriously. If we suspect any work is copied, all students involved are likely to receive zero for the entire assignment. 
+\f0\fs24 \cb1 \uc0\u8232 \
+\pard\pardeftab720\sl340\sa240\partightenfactor0
+
+\f2\fs29\fsmilli14667 \cf2 \cb3 Page 1 of 5 
+\f0\fs24 \cb1 \
+\pard\pardeftab720\sl360\sa240\partightenfactor0
+
+\b\fs32 \cf2 \cb3 Assignment questions.\cb1 \uc0\u8232 
+\f1\b0 \cb3 Write clear code with 
+\f0\b comments 
+\f1\b0 and follow 
+\f0\b coding convention
+\b0  
+\f1 . Comments should include your 
+\f0\fs24 \cb1 \
+\pard\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 name, student number and subject code on top of your code.\cb1 \uc0\u8232 
+\f0\b \cb3 Question.
+\b0  
+\f1 Write a program to calculate the income tax based on the following tax rates. 
+\f0\b FOR RESIDENTS 
+\b0\fs24 \cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 Taxable income 
+\f0\fs24 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 Tax on this income 
+\f0\fs24 \cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 0 \'96 $18,200 
+\f0\fs24 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 Nil 
+\f0\fs24 \cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 $18,201 \'96 $37,000 
+\f0\fs24 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 19c for each $1 over $18,200 
+\f0\fs24 \cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 $37,001 \'96 $87,000 
+\f0\fs24 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 $3,572 plus 32.5c for each $1 over $37,000 
+\f0\fs24 \cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 $87,001 \'96 $180,000 
+\f0\fs24 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 $19,822 plus 37c for each $1 over $87,000 
+\f0\fs24 \cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 $180,001 and over 
+\f0\fs24 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 $54,232 plus 45c for each $1 over $180,000 
+\f0\fs24 \cb1 \cell \lastrow\row
+\pard\pardeftab720\sl360\sa240\partightenfactor0
+
+\b\fs32 \cf2 \cb3 FOR NON-RESIDENTS 
+\b0\fs24 \cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 Taxable income 
+\f0\fs24 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 Tax on this income 
+\f0\fs24 \cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 0 \'96 $87,000 
+\f0\fs24 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 32.5c for each $1 
+\f0\fs24 \cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 $87,001 \'96 $180,000 
+\f0\fs24 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 $28,275 plus 37c for each $1 over $87,000 
+\f0\fs24 \cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 $180,001 and over 
+\f0\fs24 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 $62,685 plus 45c for each $1 over $180,000 
+\f0\fs24 \cb1 \cell \lastrow\row
+\pard\pardeftab720\sl360\sa240\partightenfactor0
+
+\b\fs32 \cf2 \cb3 FOR WORKING HOLIDAY VISA HOLDER 
+\b0\fs24 \cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 Taxable income 
+\f0\fs24 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 Tax on this income 
+\f0\fs24 \cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 0 \'96 $37,000 
+\f0\fs24 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 15c for each $1 
+\f0\fs24 \cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 $37,001 \'96 $87,000 
+\f0\fs24 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 $5,550 plus 32.5c for each $1 over $37,000 
+\f0\fs24 \cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 $87,001 \'96 $180,000 
+\f0\fs24 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 $21,800 plus 37c for each $1 over $87,000 
+\f0\fs24 \cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5643\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 $180,001 and over 
+\f0\fs24 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sa240\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 $56,210 plus 45c for each $1 over $180,000 
+\f0\fs24 \cb1 \cell \lastrow\row
+\pard\pardeftab720\sl340\sa240\partightenfactor0
+
+\f2\fs29\fsmilli14667 \cf2 \cb3 Page 2 of 5 
+\f0\fs24 \cb1 \
+\pard\pardeftab720\sl360\sa240\partightenfactor0
+
+\b\fs32 \cf2 \cb3 Steps of the program: 
+\b0\fs24 \cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\sa320\partightenfactor0
+\ls2\ilvl0
+\f1\fs32 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+The program should ask the user whether the user is a resident or not. \cb1 \uc0\u8232 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+If the first answer is \'93No\'94, then the program should ask the user whether the user holds a \cb1 \uc0\u8232 \cb3 working holiday visa or not. \cb1 \uc0\u8232 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	3.	}\expnd0\expndtw0\kerning0
+After that, the program should ask the user the taxable income (in dollars). Note that this \cb1 \uc0\u8232 \cb3 taxable income is 
+\f0\b an integer value
+\b0  
+\f1 . \cb1 \uc0\u8232 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	4.	}\expnd0\expndtw0\kerning0
+Then finally, the program outputs the income tax amount (in dollars). The tax amount should \cb1 \uc0\u8232 \cb3 be round off to 
+\f0\b an integer value
+\b0  
+\f1 using the function 
+\f0\b\fs37\fsmilli18667 round
+\b0  
+\f1\fs32 as described in the lecture. \cb1 \uc0\u8232 \
+\pard\pardeftab720\sl360\sa240\partightenfactor0
+\cf2 \cb3 Below are some examples of how your program should work. The text in 
+\f0\b bold
+\b0  
+\f1 indicates the user input. 
+\f0\fs24 \cb1 \
+\pard\pardeftab720\sl360\sa240\partightenfactor0
+
+\f3\fs32 \cf2 \cb3 Are you resident for tax purposes (Yes/No)?: 
+\f0\b \cf2 \cb3 Yes 
+\f3\b0 \cf2 \cb3 Enter your taxable income (in dollars): 
+\f0\b \cf2 \cb3 18200 
+\f3\b0 \cf2 \cb3 Your tax is: $0 
+\f0\fs24 \cf2 \cb1 \
+
+\f3\fs32 \cf2 \cb3 Are you resident for tax purposes (Yes/No)?: 
+\f0\b \cf2 \cb3 Yes 
+\f3\b0 \cf2 \cb3 Enter your taxable income (in dollars): 
+\f0\b \cf2 \cb3 30000 
+\f3\b0 \cf2 \cb3 Your tax is: $2242 
+\f0\fs24 \cf2 \cb1 \
+
+\f3\fs32 \cf2 \cb3 Are you resident for tax purposes (Yes/No)?: 
+\f0\b \cf2 \cb3 Yes 
+\f3\b0 \cf2 \cb3 Enter your taxable income (in dollars): 
+\f0\b \cf2 \cb3 37000 
+\f3\b0 \cf2 \cb3 Your tax is: $3572 
+\f0\fs24 \cf2 \cb1 \
+
+\f3\fs32 \cf2 \cb3 Are you resident for tax purposes (Yes/No)?: 
+\f0\b \cf2 \cb3 Yes 
+\f3\b0 \cf2 \cb3 Enter your taxable income (in dollars): 
+\f0\b \cf2 \cb3 50000 
+\f3\b0 \cf2 \cb3 Your tax is: $7797 
+\f0\fs24 \cf2 \cb1 \
+
+\f3\fs32 \cf2 \cb3 Are you resident for tax purposes (Yes/No)?: 
+\f0\b \cf2 \cb3 Yes 
+\f3\b0 \cf2 \cb3 Enter your taxable income (in dollars): 
+\f0\b \cf2 \cb3 87000 
+\f3\b0 \cf2 \cb3 Your tax is: $19822 
+\f0\fs24 \cf2 \cb1 \
+
+\f3\fs32 \cf2 \cb3 Are you resident for tax purposes (Yes/No)?: 
+\f0\b \cf2 \cb3 Yes 
+\f3\b0 \cf2 \cb3 Enter your taxable income (in dollars): 
+\f0\b \cf2 \cb3 100000 
+\f3\b0 \cf2 \cb3 Your tax is: $24632 
+\f0\fs24 \cf2 \cb1 \
+
+\f3\fs32 \cf2 \cb3 Are you resident for tax purposes (Yes/No)?: 
+\f0\b \cf2 \cb3 Yes 
+\f3\b0 \cf2 \cb3 Enter your taxable income (in dollars): 
+\f0\b \cf2 \cb3 180000 
+\f3\b0 \cf2 \cb3 Your tax is: $54232 
+\f0\fs24 \cf2 \cb1 \
+\pard\pardeftab720\sl340\sa240\partightenfactor0
+
+\f2\fs29\fsmilli14667 \cf2 \cb3 Page 3 of 5 
+\f0\fs24 \cb1 \
+\pard\pardeftab720\sl360\sa240\partightenfactor0
+
+\f3\fs32 \cf2 \cb3 Are you resident for tax purposes (Yes/No)?: 
+\f0\b \cf2 \cb3 Yes 
+\f3\b0 \cf2 \cb3 Enter your taxable income (in dollars): 
+\f0\b \cf2 \cb3 200000 
+\f3\b0 \cf2 \cb3 Your tax is: $63232 
+\f0\fs24 \cf2 \cb1 \
+
+\f3\fs32 \cf2 \cb3 ****** 
+\f0\fs24 \cf2 \cb1 \
+
+\f3\fs32 \cf2 \cb3 Are you resident for tax purposes (Yes/No)?: 
+\f0\b \cf2 \cb3 No\cb1 \uc0\u8232 
+\f3\b0 \cf2 \cb3 Are you holding a working holiday visa (Yes/No)?: 
+\f0\b \cf2 \cb3 No 
+\f3\b0 \cf2 \cb3 Enter your taxable income (in dollars): 
+\f0\b \cf2 \cb3 50000\cb1 \uc0\u8232 
+\f3\b0 \cf2 \cb3 Your tax is: $16250 
+\f0\fs24 \cf2 \cb1 \
+
+\f3\fs32 \cf2 \cb3 Are you resident for tax purposes (Yes/No)?: 
+\f0\b \cf2 \cb3 No\cb1 \uc0\u8232 
+\f3\b0 \cf2 \cb3 Are you holding a working holiday visa (Yes/No)?: 
+\f0\b \cf2 \cb3 No 
+\f3\b0 \cf2 \cb3 Enter your taxable income (in dollars): 
+\f0\b \cf2 \cb3 87000\cb1 \uc0\u8232 
+\f3\b0 \cf2 \cb3 Your tax is: $28275 
+\f0\fs24 \cf2 \cb1 \
+
+\f3\fs32 \cf2 \cb3 Are you resident for tax purposes (Yes/No)?: 
+\f0\b \cf2 \cb3 No\cb1 \uc0\u8232 
+\f3\b0 \cf2 \cb3 Are you holding a working holiday visa (Yes/No)?: 
+\f0\b \cf2 \cb3 No 
+\f3\b0 \cf2 \cb3 Enter your taxable income (in dollars): 
+\f0\b \cf2 \cb3 100000\cb1 \uc0\u8232 
+\f3\b0 \cf2 \cb3 Your tax is: $33085 
+\f0\fs24 \cf2 \cb1 \
+
+\f3\fs32 \cf2 \cb3 Are you resident for tax purposes (Yes/No)?: 
+\f0\b \cf2 \cb3 No\cb1 \uc0\u8232 
+\f3\b0 \cf2 \cb3 Are you holding a working holiday visa (Yes/No)?: 
+\f0\b \cf2 \cb3 No 
+\f3\b0 \cf2 \cb3 Enter your taxable income (in dollars): 
+\f0\b \cf2 \cb3 180000\cb1 \uc0\u8232 
+\f3\b0 \cf2 \cb3 Your tax is: $62685 
+\f0\fs24 \cf2 \cb1 \
+
+\f3\fs32 \cf2 \cb3 Are you resident for tax purposes (Yes/No)?: 
+\f0\b \cf2 \cb3 No\cb1 \uc0\u8232 
+\f3\b0 \cf2 \cb3 Are you holding a working holiday visa (Yes/No)?: 
+\f0\b \cf2 \cb3 No 
+\f3\b0 \cf2 \cb3 Enter your taxable income (in dollars): 
+\f0\b \cf2 \cb3 200000\cb1 \uc0\u8232 
+\f3\b0 \cf2 \cb3 Your tax is: $71685 
+\f0\fs24 \cf2 \cb1 \
+
+\f3\fs32 \cf2 \cb3 ****** 
+\f0\fs24 \cf2 \cb1 \
+
+\f3\fs32 \cf2 \cb3 Are you resident for tax purposes (Yes/No)?: 
+\f0\b \cf2 \cb3 No\cb1 \uc0\u8232 
+\f3\b0 \cf2 \cb3 Are you holding a working holiday visa (Yes/No)?: 
+\f0\b \cf2 \cb3 Yes 
+\f3\b0 \cf2 \cb3 Enter your taxable income (in dollars): 
+\f0\b \cf2 \cb3 30000\cb1 \uc0\u8232 
+\f3\b0 \cf2 \cb3 Your tax is: $4500 
+\f0\fs24 \cf2 \cb1 \
+\pard\pardeftab720\sl340\sa240\partightenfactor0
+
+\f2\fs29\fsmilli14667 \cf2 \cb3 Page 4 of 5 
+\f0\fs24 \cb1 \
+\pard\pardeftab720\sl360\sa240\partightenfactor0
+
+\f3\fs32 \cf2 \cb3 Are you resident for tax purposes (Yes/No)?: 
+\f0\b \cf2 \cb3 No\cb1 \uc0\u8232 
+\f3\b0 \cf2 \cb3 Are you holding a working holiday visa (Yes/No)?: 
+\f0\b \cf2 \cb3 Yes 
+\f3\b0 \cf2 \cb3 Enter your taxable income (in dollars): 
+\f0\b \cf2 \cb3 37000\cb1 \uc0\u8232 
+\f3\b0 \cf2 \cb3 Your tax is: $5550 
+\f0\fs24 \cf2 \cb1 \
+
+\f3\fs32 \cf2 \cb3 Are you resident for tax purposes (Yes/No)?: 
+\f0\b \cf2 \cb3 No\cb1 \uc0\u8232 
+\f3\b0 \cf2 \cb3 Are you holding a working holiday visa (Yes/No)?: 
+\f0\b \cf2 \cb3 Yes 
+\f3\b0 \cf2 \cb3 Enter your taxable income (in dollars): 
+\f0\b \cf2 \cb3 50000\cb1 \uc0\u8232 
+\f3\b0 \cf2 \cb3 Your tax is: $9775 
+\f0\fs24 \cf2 \cb1 \
+
+\f3\fs32 \cf2 \cb3 Are you resident for tax purposes (Yes/No)?: 
+\f0\b \cf2 \cb3 No\cb1 \uc0\u8232 
+\f3\b0 \cf2 \cb3 Are you holding a working holiday visa (Yes/No)?: 
+\f0\b \cf2 \cb3 Yes 
+\f3\b0 \cf2 \cb3 Enter your taxable income (in dollars): 
+\f0\b \cf2 \cb3 87000\cb1 \uc0\u8232 
+\f3\b0 \cf2 \cb3 Your tax is: $21800 
+\f0\fs24 \cf2 \cb1 \
+
+\f3\fs32 \cf2 \cb3 Are you resident for tax purposes (Yes/No)?: 
+\f0\b \cf2 \cb3 No\cb1 \uc0\u8232 
+\f3\b0 \cf2 \cb3 Are you holding a working holiday visa (Yes/No)?: 
+\f0\b \cf2 \cb3 Yes 
+\f3\b0 \cf2 \cb3 Enter your taxable income (in dollars): 
+\f0\b \cf2 \cb3 100000\cb1 \uc0\u8232 
+\f3\b0 \cf2 \cb3 Your tax is: $26610 
+\f0\fs24 \cf2 \cb1 \
+
+\f3\fs32 \cf2 \cb3 Are you resident for tax purposes (Yes/No)?: 
+\f0\b \cf2 \cb3 No\cb1 \uc0\u8232 
+\f3\b0 \cf2 \cb3 Are you holding a working holiday visa (Yes/No)?: 
+\f0\b \cf2 \cb3 Yes 
+\f3\b0 \cf2 \cb3 Enter your taxable income (in dollars): 
+\f0\b \cf2 \cb3 180000\cb1 \uc0\u8232 
+\f3\b0 \cf2 \cb3 Your tax is: $56210 
+\f0\fs24 \cf2 \cb1 \
+
+\f3\fs32 \cf2 \cb3 Are you resident for tax purposes (Yes/No)?: 
+\f0\b \cf2 \cb3 No\cb1 \uc0\u8232 
+\f3\b0 \cf2 \cb3 Are you holding a working holiday visa (Yes/No)?: 
+\f0\b \cf2 \cb3 Yes 
+\f3\b0 \cf2 \cb3 Enter your taxable income (in dollars): 
+\f0\b \cf2 \cb3 200000\cb1 \uc0\u8232 
+\f3\b0 \cf2 \cb3 Your tax is: $65210 
+\f0\fs24 \cf2 \cb1 \
+\pard\pardeftab720\sl360\sa240\partightenfactor0
+
+\b\fs32 \cf2 \cb3 END OF THE ASSIGNMENT 
+\b0\fs24 \cb1 \
+\pard\pardeftab720\sl340\sa240\partightenfactor0
+
+\f2\fs29\fsmilli14667 \cf2 \cb3 Page 5 of 5 
+\f0\fs24 \cb1 \
+}

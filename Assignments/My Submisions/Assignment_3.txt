@@ -1,0 +1,243 @@
+# Name: Samantha Mackay
+# Student Number: 3467946
+# Subject: CSIT110
+
+"""
+Assignment 3
+Released: Monday 26/03/18
+Due: Sunday 08/04/18
+
+"""
+
+# Assignment 3 - (Tues 27/03/18)
+# Personal Details
+first_name = "Samantha"
+last_name = "Mackay"
+full_name = first_name + " " + last_name
+student_number = 3467946
+subject_code = "CSIT110"
+task_name = "Assignment"
+task_number = 3
+
+print("\n{0} - {1} - {2} - {3} {4}\n\n".format(
+    full_name, student_number, subject_code, task_name, task_number))
+
+input("Please press enter to begin Question 1. \n\n")
+
+# Question 1
+print("Question 1 \n")
+# User to supply details for three subjects
+
+# Subject 1 info:
+subject_code1 = input("Enter the 1st subject code: \t\t")
+subject_title1 = input("Enter the 1st subject title: \t\t")
+credit_point1_input = input("Enter the 1st subject credit point: \t")
+
+# Convert input to integer
+credit_point1_integer = int(credit_point1_input)
+print()
+
+
+# Subject 2 info:
+subject_code2 = input("Enter the 2nd subject code: \t\t")
+subject_title2 = input("Enter the 2nd subject title: \t\t")
+credit_point2_input = input("Enter the 2nd subject credit point: \t")
+
+# Convert input to integer
+credit_point2_integer = int(credit_point2_input)
+print()
+
+
+# Subject 3 info:
+subject_code3 = input("Enter the 3rd subject code: \t\t")
+subject_title3 = input("Enter the 3rd subject title: \t\t")
+credit_point3_input = input("Enter the 3rd subject credit point: \t")
+
+# Convert input to integer
+credit_point3_integer = int(credit_point3_input)
+print()
+
+# Total Credit Points
+credit_point_sum = credit_point1_integer \
+    + credit_point2_integer \
+    + credit_point3_integer
+
+total_credit_points = str(credit_point_sum)
+
+
+# - Part A - string addition
+print("\n - PART A: Display subject details using string addition. \n")
+
+print("Chosen subjects: \n"
+      + subject_code1 + " - \"" + subject_title1 + "\" \n"
+      + subject_code2 + " - \"" + subject_title2 + "\" \n"
+      + subject_code3 + " - \"" + subject_title3 + "\" \n"
+      + "Total credit points: " + total_credit_points + ". \n\n")
+
+
+# - Part B - string format
+print(" - PART B: Display subject details using string format.\n")
+
+# Print Column Headings
+print("{0:<9}{1:^50}{2:>15}".format(
+    "Code", "Title", "Credit Point"))
+
+print("\
+{0:<9}{1:^50}{2:>15}\n\
+{3:<9}{4:^50}{5:>15}\n\
+{6:<9}{7:^50}{8:>15}".format(
+    subject_code1, subject_title1, credit_point1_integer,
+    subject_code2, subject_title2, credit_point2_integer,
+    subject_code3, subject_title3, credit_point3_integer))
+
+print("{0:<9}{1:>65}\n\n\n".format("Total", credit_point_sum))
+
+
+
+input("Please press enter to begin Question 2. \n\n")
+
+# Question 2
+print("Question 2\n")
+# User inputs amount to borrow and interest rate
+# Print a five-year statement
+
+# - Example 1
+print(" - Example 1\n")
+# Borrowing Amount
+borrow1_input = input("Enter an amount to be borrowed: ")
+borrow1_integer = int(borrow1_input)
+
+# Interest Rate
+rate1_input = input("Enter the interest rate (in percentage): ")
+rate1_percent = float(rate1_input)/100
+print()
+
+# Variables:
+interest_year1 = round(borrow1_integer * rate1_percent)
+end_of_year1 = round(borrow1_integer + interest_year1)
+
+interest_year2 = round(end_of_year1 * rate1_percent)
+end_of_year2 = round(end_of_year1 + interest_year2)
+
+interest_year3 = round(end_of_year2 * rate1_percent)
+end_of_year3 = round(end_of_year2 + interest_year3)
+
+interest_year4 = round(end_of_year3 * rate1_percent)
+end_of_year4 = round(end_of_year3 + interest_year4)
+
+interest_year5 = round(end_of_year4 * rate1_percent)
+end_of_year5 = round(end_of_year4 + interest_year5)
+
+
+# Print
+# Table Heading
+print("{0:>32}{1:>18}{2:>3}{3}{4:>20}".format
+      ("Start of year", "Interest at ", rate1_input, "%", "End of year"))
+
+# Data Line 1
+print("{0}{1}{2:>26}{3:>22}{4:>20}".format
+      ("Year ", "1",
+       "$" + str(borrow1_integer),
+       "$" + str(interest_year1),
+       "$" + str(end_of_year1)))
+
+# Data Line 2
+print("{0}{1}{2:>26}{3:>22}{4:>20}".format
+      ("Year ", "2",
+       "$" + str(end_of_year1),
+       "$" + str(interest_year2),
+       "$" + str(end_of_year2)))
+
+# Data Line 3
+print("{0}{1}{2:>26}{3:>22}{4:>20}".format
+      ("Year ", "3",
+       "$" + str(end_of_year2),
+       "$" + str(interest_year3),
+       "$" + str(end_of_year3)))
+
+# Data Line 4
+print("{0}{1}{2:>26}{3:>22}{4:>20}".format
+      ("Year ", "4",
+       "$" + str(end_of_year3),
+       "$" + str(interest_year4),
+       "$" + str(end_of_year4)))
+
+# Data Line 5
+print("{0}{1}{2:>26}{3:>22}{4:>20}\n\n".format
+      ("Year ", "5",
+       "$" + str(end_of_year4),
+       "$" + str(interest_year5),
+       "$" + str(end_of_year5)))
+
+
+# - Example 2
+print(" - Example 2\n")
+# Borrowing Amount
+borrow1_input = input("Enter an amount to be borrowed: ")
+borrow1_integer = int(borrow1_input)
+
+# Interest Rate
+rate1_input = input("Enter the interest rate (in percentage): ")
+rate1_percent = float(rate1_input)/100
+print()
+
+# Variables:
+interest_year1 = round(borrow1_integer * rate1_percent)
+end_of_year1 = round(borrow1_integer + interest_year1)
+
+interest_year2 = round(end_of_year1 * rate1_percent)
+end_of_year2 = round(end_of_year1 + interest_year2)
+
+interest_year3 = round(end_of_year2 * rate1_percent)
+end_of_year3 = round(end_of_year2 + interest_year3)
+
+interest_year4 = round(end_of_year3 * rate1_percent)
+end_of_year4 = round(end_of_year3 + interest_year4)
+
+interest_year5 = round(end_of_year4 * rate1_percent)
+end_of_year5 = round(end_of_year4 + interest_year5)
+
+# Print
+# Table Heading
+print("{0:>32}{1:>17}{2:>4}{3}{4:>20}".format
+      ("Start of year", "Interest at ", rate1_input, "%", "End of year"))
+
+# Data Line 1
+print("{0}{1}{2:>26}{3:>22}{4:>20}".format
+      ("Year ", "1",
+       "$" + str(borrow1_integer),
+       "$" + str(interest_year1),
+       "$" + str(end_of_year1)))
+
+# Data Line 2
+print("{0}{1}{2:>26}{3:>22}{4:>20}".format
+      ("Year ", "2",
+       "$" + str(end_of_year1),
+       "$" + str(interest_year2),
+       "$" + str(end_of_year2)))
+
+# Data Line 3
+print("{0}{1}{2:>26}{3:>22}{4:>20}".format
+      ("Year ", "3",
+       "$" + str(end_of_year2),
+       "$" + str(interest_year3),
+       "$" + str(end_of_year3)))
+
+# Data Line 4
+print("{0}{1}{2:>26}{3:>22}{4:>20}".format
+      ("Year ", "4",
+       "$" + str(end_of_year3),
+       "$" + str(interest_year4),
+       "$" + str(end_of_year4)))
+
+# Data Line 5
+print("{0}{1}{2:>26}{3:>22}{4:>20}\n".format
+      ("Year ", "5",
+       "$" + str(end_of_year4),
+       "$" + str(interest_year5),
+       "$" + str(end_of_year5)))
+
+
+# End of Assignment 3
+date = "Tues 27th March 2018"
+print("\n\nEnd. " + full_name + " - " + date)

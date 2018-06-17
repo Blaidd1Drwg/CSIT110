@@ -1,0 +1,104 @@
+# Name: Samantha Mackay
+# Student Number: 3467946
+# Subject: CSIT110
+
+"""
+Assignment 1
+Released: Monday 12/03/18
+Due: Sunday 18/03/18
+
+"""
+
+# Assignment 1 - (Tues 13/03/18)
+# Personal Details
+first_name = "Samantha"
+last_name = "Mackay"
+full_name = first_name + " " + last_name
+student_number = 3467946
+subject_code = "CSIT110"
+task_name = "Assignment"
+task_number = 1
+
+print(full_name + " - " + str(student_number) + " - " + subject_code + " - " + task_name + " " + str(task_number))
+print()
+print()
+
+
+# Question 1
+print("Question 1")
+print()
+
+print("At UOW, plagiarism is treated seriously.")
+print("I have read the plagiarism policy.")
+print("I declare that this assignment solution is entirely my work.")
+print()
+print()
+
+
+# Question 2
+print("Question 2")
+print()
+
+# Write a program using appropriate variables to output Subject Info
+# Use string concatenation/addition
+
+# First subject details
+subject1_code = "MATH901"
+subject1_name = "Abstract Algebra"
+subject1_credit_point = 6
+
+# Second subject details
+subject2_code = "MATH911"
+subject2_name = "Mathematical Logic"
+subject2_credit_point = 4
+
+# Print subject details in format:
+# "Subject" + code + name + : + number + "credit points."
+
+# Subject 1
+print("Subject " + subject1_code + " " + subject1_name + ": " + str(subject1_credit_point) + " credit points.")
+
+# Subject 2
+print("Subject " + subject2_code + " " + subject2_name + ": " + str(subject2_credit_point) + " credit points.")
+print()
+print()
+
+
+# Question 3
+print("Question 3")
+print()
+
+# Write a program using appropriate variables to output Component Weights
+# Use string concatenation/addition
+
+tasks_heading = "Assessment task weighting"
+
+# Assignment 1
+task1 = "Essay"
+task1_weight = 10
+
+# Assignment 2
+task2 = "Programming assignment"
+task2_weight = 30
+
+# Assignment 3
+task3 = "Project presentation"
+task3_weight = 20
+
+# Assignment 4
+task4 = "Final exam"
+task4_weight = 40
+
+# Print tasks details in format: name + : + weight + %
+print(tasks_heading + ":")
+print(task1 + ": " + str(task1_weight) + "%")
+print(task2 + ": " + str(task2_weight) + "%")
+print(task3 + ": " + str(task3_weight) + "%")
+print(task4 + ": " + str(task4_weight) + "%")
+print()
+print()
+
+
+# End of Assignment 1
+date = "Tues 13th March 2018"
+print("End. " + full_name + " - " + date)

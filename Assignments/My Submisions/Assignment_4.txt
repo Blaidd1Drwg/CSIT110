@@ -1,0 +1,196 @@
+# Name: Samantha Mackay
+# Student Number: 3467946
+# Subject: CSIT110
+
+"""
+Assignment 4
+Released: Monday 09/04/18
+Due: Sunday 15/04/18
+"""
+
+# Assignment 4 - (Tues 10/04/18)
+# Personal Details
+first_name = "Samantha"
+last_name = "Mackay"
+full_name = first_name + " " + last_name
+student_number = 3467946
+subject_code = "CSIT110"
+task_name = "Assignment"
+task_number = 4
+run_task = True
+
+print("\n{0} - {1} - {2} - {3} {4}".format(
+    full_name, student_number, subject_code, task_name, task_number))
+    
+
+# Assign Variables
+
+# Taxable income brackets
+minimum1 = 0
+minimum2 = 18200
+minimum3 = 37000
+minimum4 = 87000
+minimum5 = 180000
+
+# Tax per dollar
+rate1 = 0.15
+rate2 = 0.19
+rate3 = 0.325
+rate4 = 0.37
+rate5 = 0.45
+statement0 = " for each $1"
+statement1 = " for each $1 over "
+statement2 = " plus "
+statement3 = "and over"
+
+# Tax flat amounts
+flat1 = 3572
+flat2 = 5550
+flat3 = 19822
+flat4 = 21800
+flat5 = 28275
+flat6 = 54232
+flat7 = 56210
+flat8 = 62685
+
+
+# (Not required. Additional) Print current tax rates
+print("\n\nCurrent Tax Structure")
+
+# Table 1 - Residents
+print("\nFOR RESIDENTS")
+print("{0:<30}{1:<30}".format("Taxable Income", "Tax on this income"))
+print("{0} - ${1:<25}{2}". \
+  format(minimum1, minimum2, "Nil"))
+print("${0} - ${1:<20}${2}{3}${4}". \
+  format(minimum2 + 1, minimum3, rate2, statement1, minimum2))
+print("${0} - ${1:<20}${2}{3}${4}{5}${6}". \
+  format(minimum3 + 1, minimum4, flat1, statement2, rate3, statement1, minimum3))
+print("${0} - ${1:<20}${2}{3}${4}{5}${6}". \
+  format(minimum4 + 1, minimum5, flat3, statement2, rate4, statement1, minimum4))
+print("${0} {1:<22}${2}{3}${4}{5}${6}". \
+  format(minimum5 + 1, statement3, flat6, statement2, rate5, statement1, minimum5))
+  
+# Table 2 - Non-Residents
+print("\nFOR NON-RESIDENTS")
+print("{0:<30}{1:<30}".format("Taxable Income", "Tax on this income"))
+print("{0} - ${1:<25}${2}{3}". \
+  format(minimum1, minimum4, rate3, statement0))
+print("${0} - ${1:<20}${2}{3}${4}{5}${6}". \
+  format(minimum4 + 1, minimum5, flat5, statement2, rate4, statement1, minimum4))
+print("${0} {1:<22}${2}{3}${4}{5}${6}". \
+  format(minimum5 + 1, statement3, flat8, statement2, rate5, statement1, minimum5))
+  
+# Table 3 - Visa Holders
+print("\nFOR WORKING HOLIDAY VISA HOLDER")
+print("{0:<30}{1:<30}".format("Taxable Income", "Tax on this income"))
+print("{0} - ${1:<25}${2}{3}". \
+  format(minimum1, minimum3, rate1, statement0))
+print("${0} - ${1:<20}${2}{3}${4}{5}${6}". \
+  format(minimum3 + 1, minimum4, flat2, statement2, rate3, statement1, minimum3))
+print("${0} - ${1:<20}${2}{3}${4}{5}${6}". \
+  format(minimum4 + 1, minimum5, flat4, statement2, rate4, statement1, minimum4))
+print("${0} {1:<22}${2}{3}${4}{5}${6}". \
+  format(minimum5 + 1, statement3, flat7, statement2, rate5, statement1, minimum5))
+
+    
+# Define a function so that the calculation program can be repeated.   
+def start():
+
+  input("\n\n - Press enter to calculate your tax income, or close the shell to end the program.\n")
+
+  # User details
+  # Residency Status
+  resident_input = input("1). Are you a resident for tax purposes? (Yes/No): ")
+
+
+  # No, is not a resident
+  if ((resident_input == "No") or
+      (resident_input == "no") or
+      (resident_input == "NO")):
+
+      # Working Holiday Visa
+      visa_input = input("2). Are you holding a working holiday visa? (Yes/No): ")
+
+      # Taxable Income
+      income_input = input("3). Enter your taxable income (in dollars): ")
+      income = int(income_input)
+
+
+      # Tax calculation if NO visa
+      if ((visa_input == "No") or \
+          (visa_input == "no") or \
+          (visa_input == "NO")):
+
+          # $0 - $87,000
+          if (income <= minimum4):
+              tax = round(income * rate3)
+  
+          # $87,000 - $180,000
+          elif (income <= minimum5):
+              tax = round(((income - minimum4) * rate4) + flat5)
+
+          # $180,001 and over
+          else:
+              tax = round(((income - minimum5) * rate5) + flat8)
+
+
+      # Tax calculation if YES visa
+      else:
+          # $0 - $37,000
+          if (income <= minimum3):
+              tax = round(income * rate1)
+
+          # $0 - $87,000
+          elif (income <= minimum4):
+              tax = round(((income - minimum3) * rate3) + flat2)
+
+          # $87,000 - $180,000
+          elif (income <= minimum5):
+              tax = round(((income - minimum4) * rate4) + flat4)
+
+          # $180,001 and over
+          else:
+              tax = round(((income - minimum5) * rate5) + flat7)
+
+      # Print Tax amount
+      print("\nYour tax is: ${0}".format(tax))
+
+
+  # Yes, is a resident. i.e. Visa is N/A
+  else:
+      income_input = input("2). Enter your taxable income (in dollars): ")
+      income = int(income_input)
+
+      # Tax calculations
+      # $0 - $18,200
+      if (income <= minimum2):
+          tax = 0
+
+      # $18,201 - $37,000
+      elif (income <= minimum3):
+          tax = round((income - minimum2) * rate2)
+
+      # $37,001 - $87,000
+      elif (income <= minimum4):
+          tax = round(((income - minimum3) * rate3) + flat1)
+
+      # $87,001 - $180,000
+      elif (income <= minimum5):
+          tax = round(((income - minimum4) * rate4) + flat3)
+
+      # $180,001 and over
+      else:
+          tax = round(((income - minimum5) * rate5) + flat6)
+
+      # Print Tax amount
+      print("\nYour tax is: ${0}".format(tax))
+      
+
+
+while run_task :
+    start()
+
+    
+  
+

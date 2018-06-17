@@ -1,0 +1,170 @@
+# Name: Samantha Mackay
+# Student Number: 3467946
+# Subject: CSIT110
+
+"""
+Assignment 7
+Released: Monday 14/05/18
+Due: Sunday 20/05/18
+"""
+
+
+# Personal details:
+print("Samantha Mackay - 3467946 - CSIT110 - Assignment 7")
+
+# Ask user to confirm commencement
+input("\n\n - Please press enter to begin Question. ")
+
+
+# ======================================================================
+# Section 1: Assigning Values to Variables
+# ======================================================================
+
+# Assign price values to price variables
+SMALL_PRICE = 5
+MEDIUM_PRICE = 7
+LARGE_PRICE = 10
+
+
+# ======================================================================
+# Section 2: Defining Functions
+# ======================================================================
+
+# Define #1: Menu - Print to screen function
+
+def print_menu():
+    print()
+    print("-----------------------------------------")
+    print("--  Welcome to Joe's Ice Cream Shop!   --")
+    print("-----------------------------------------")
+    print()
+    print("Small ${0}, Medium ${1}, Large ${2}".format(SMALL_PRICE, MEDIUM_PRICE, LARGE_PRICE))
+    print()
+    print("Please make your order.")
+    print()
+    print("Flavours:")
+    print("1 - Banana")
+    print("2 - Almond Macaron")
+    print("3 - Baseball Nut")
+    print("4 - Citrus Twist Ice")
+    print("5 - Cookies n Cream")
+    print()
+
+# End of function: "print_menu"
+
+
+# Define #2: Order - Take order from customer function
+
+def take_order():
+    # Ask customer which flavour of ice-cream
+    flavour_input = int(input("Please select flavour (1-5): "))
+
+    # What flavour did customer choose?
+    if (flavour_input == 1):
+        # Option 1 - banana
+        flavour = "Banana"
+
+    elif (flavour_input == 2):
+        # Option 1 - almond macaron
+        flavour = "Almond Macaron"
+
+    elif (flavour_input == 3):
+        # Option 3 - baseball nut
+        flavour = "Baseball Nut"
+
+    elif (flavour_input == 4):
+        # Option 4 - citrus twist ice
+        flavour = "Citrus Twist Ice"
+
+    elif (flavour_input == 5):
+        # Option 5 - cookies n cream
+        flavour = "Cookies n Cream"
+
+
+    # Ask customer which size of ice-cream
+    size_input = input("Please select size (S/M/L): ")
+
+    # Convert customer input to uppercase
+    size = size_input.upper()
+
+    # What size did customer choose?
+    if (size == "S"):
+        # Option small
+        size_cost = SMALL_PRICE
+
+    elif (size == "M"):
+        # Option medium
+        size_cost = MEDIUM_PRICE
+
+    elif (size == "L"):
+        # Option large
+        size_cost = LARGE_PRICE
+
+
+    # Ask customer if additional chocolate topping
+    choc_topping = input("Chocolate topping for an extra $1? (Y/N): ")
+
+    # Customer chose yes, additional choc topping
+    if ((choc_topping == "Y") or (choc_topping == "y")):
+        include_choc_topping = True
+
+    # Customer chose no, no topping
+    else:
+        include_choc_topping = False
+
+    return flavour, size_cost, include_choc_topping, size
+
+# End of function: "take_order"
+
+
+# Define #3: Cost - Print final cost function
+
+def print_cost(flavour, size_cost, include_choc_topping, size):
+    # calculate and print the total charge
+
+    # Does customer want chocolate topping?
+    if (include_choc_topping):
+        topping_cost = 1.0001
+        topping_choice = " and Choc Topping"
+    else:
+        topping_cost = 0.0001
+        topping_choice = ""
+
+    # Cost of ice-cream
+    combined_cost = (size_cost + topping_cost)
+
+    if (combined_cost >= 10):
+        total_cost = (str(combined_cost))[:5]
+    else:
+        total_cost = (str(combined_cost))[:4]
+
+
+    # Print customer's choices
+    print()
+    print("***************************************************")
+    print("{0}{1} ({2}): ${3}". \
+        format(flavour, topping_choice, size, total_cost))
+
+    print()
+    print("Thank you for your order!")
+    print("***************************************************")
+
+# End of function: "print_cost"
+
+
+# ======================================================================
+# Section 3: Main Program
+# ======================================================================
+
+# print menu to user
+print_menu()
+
+# take order from user
+flavour, size_cost, include_choc_topping, size = take_order()
+
+# print receipt to user
+print_cost(flavour, size_cost, include_choc_topping, size)
+
+
+
+# End of Assignment 7
